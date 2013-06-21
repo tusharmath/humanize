@@ -44,11 +44,11 @@ Humanize.formatNumber(123456789, 2)
 // "123,456,789.00"
 ```
 
-##### intcomma
+##### intComma
 Converts an integer to a string containing commas every three digits.
 
 ```javascript
-Humanize.intcomma(123456789)
+Humanize.intComma(123456789)
 // "123,456,789"
 ```
 
@@ -94,17 +94,17 @@ for (i=0; i<5; i++) {
 // too many times
 ```
 
-##### filesize
+##### fileSize
 Formats the value like a 'human-readable' file size (i.e. '13 KB', '4.1 MB', '102 bytes', etc).
 
 ```javascript
-Humanize.filesize(1024 * 20)
+Humanize.fileSize(1024 * 20)
 // "20 Kb"
 
-Humanize.filesize(1024 * 2000)
+Humanize.fileSize(1024 * 2000)
 // "1.95 Mb"
 
-Humanize.filesize(Math.pow(1000, 4))
+Humanize.fileSize(Math.pow(1000, 4))
 // "931.32 Gb"
 ```
 
@@ -136,12 +136,23 @@ Humanize.truncate('long text is good for you', 19, '... etc')
 // "long text is... etc"
 ```
 
-##### truncatewords
+##### truncateWords
 Truncates a string after a certain number of words.
 
 ```javascript
-Humanize.truncatewords('long text is good for you', 5)
+Humanize.truncateWords('long text is good for you', 5)
 // "long text is good for ..."
+```
+
+##### boundedNumber
+Bounds a value from above. Modified values have customizable ending strings ('+' by default)
+
+```javascript
+Humanize.boundedNumber(110, 100)
+// "100+"
+
+Humanize.boundedNumber(50, 100)
+// "50"
 ```
 
 ##### oxford
@@ -229,14 +240,14 @@ Humanize.capitalizeAll("some boring string")
 // "Some Boring String"
 ```
 
-##### titlecase
+##### titleCase
 Intelligently capitalizes eligible words in a string and normalizes internal whitespace.
 
 ```javascript
-Humanize.titlecase("some of a boring string")
+Humanize.titleCase("some of a boring string")
 // "Some of a Boring String"
 
-Humanize.titlecase("cool the          iTunes cake, O'Malley!")
+Humanize.titleCase("cool the          iTunes cake, O'Malley!")
 // "Cool the iTunes Cake, O'Malley!"
 ```
 
